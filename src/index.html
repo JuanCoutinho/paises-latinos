@@ -6,8 +6,14 @@
     <title>Países</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para esconder os países que não correspondem à pesquisa */
+        .country-card {
+            display: block;
+        }
+    </style>
 </head>
-<body class="bg-gray-50"></body>
+<body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
@@ -40,193 +46,171 @@
             <p class="mt-4 text-gray-600">Descubra as maravilhas culturais, naturais e tecnológicas que cada país tem a oferecer.</p>
         </section>
 
+        <!-- Seção de Pesquisa -->
+        <section class="mt-6">
+            <input type="text" id="search" placeholder="Pesquise por um país..." class="w-full p-2 border border-gray-300 rounded-md" onkeyup="filterCountries()">
+        </section>
+
         <!-- Seção dos Países -->
         <section id="countries" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-             <!-- Argentina -->
-             <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <!-- Argentina -->
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Argentina">
                 <img src="assets/img/argentina/argentina.png" alt="Argentina" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-red-600">Argentina</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Bolivia -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/bolivia/bolivia.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Bolívia</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Brasil -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/brasil/brasil.jpg" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Brasil</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Chile -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/chile/chile.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Chile</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Colombia -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/colombia/colombia.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Colômbia</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Costa Rica -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/costa rica/costa_rica.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Costa Rica</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Cuba -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/cuba/cuba.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Cuba</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Equador -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/equador/equador.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Equador</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- El Salvador -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/el_salvador/el_salvador.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">El Salvador</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Guatemala -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/guatemala/guatemala.jpg" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Guatemala</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Haiti -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/haiti/haiti.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Haiti</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Honduras -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/honduras/honduras.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Honduras</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- México -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/mexico/mexico.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">México</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Nicaragua -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/nicaragua/nicaragua.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Nicarágua</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Panama -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/panama/panama.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Panama</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Paraguai -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/paraguai/paraguai.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Paraguai</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-
-            <!-- Peru -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/peru/peru.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Peru</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
+                    <p class="text-gray-600">A Argentina é um país localizado na América do Sul, conhecido por sua dança e sua música, o tango.</p>
                 </div>
             </div>
             
-            <!-- República Dominicana -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/republica_dominicana/republica_dominicana.png" alt="flag Republica Dominicana" class="w-full h-48 object-cover">
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Bolívia">
+                <img src="assets/img/bolivia/bolivia.png" alt="Bolívia" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-800"><a href="sobre.html">Republica Dominicana</a></h3>
-                    <p class="text-gray-600">Conhecido por suas praias deslumbrantes e pelo seus resorts, a Republica Dominicana é um dos países da America Central.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Bolívia</h3>
+                    <p class="text-gray-600">A Bolívia é um país localizado na América do Sul, conhecido por sua rica cultura indígena.</p>
                 </div>
             </div>
-
-            <!-- Uruguai -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Brasil">
+                <img src="assets/img/brasil/brasil.jpg" alt="Brasil" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Brasil</h3>
+                    <p class="text-gray-600">O Brasil é o maior país da América do Sul, famoso pelo Carnaval e sua diversidade cultural.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Chile">
+                <img src="assets/img/chile/chile.png" alt="Chile" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Chile</h3>
+                    <p class="text-gray-600">O Chile é conhecido por suas paisagens diversificadas, que vão do deserto ao gelo.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Colômbia">
+                <img src="assets/img/colombia/colombia.png" alt="Colômbia" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Colômbia</h3>
+                    <p class="text-gray-600">A Colômbia é conhecida por seu café, suas paisagens tropicais e sua vibrante cultura.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Costa Rica">
+                <img src="assets/img/costa rica/costa_rica.png" alt="Costa Rica" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Costa Rica</h3>
+                    <p class="text-gray-600">A Costa Rica é famosa por sua biodiversidade e belas praias.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Cuba">
+                <img src="assets/img/cuba/cuba.png" alt="Cuba" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Cuba</h3>
+                    <p class="text-gray-600">Cuba é conhecida por suas belas praias e rica história cultural.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Equador">
+                <img src="assets/img/equador/equador.png" alt="Equador" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Equador</h3>
+                    <p class="text-gray-600">O Equador é famoso por suas ilhas Galápagos e biodiversidade.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="El Salvador">
+                <img src="assets/img/el_salvador/el_salvador.png" alt="El Salvador" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">El Salvador</h3>
+                    <p class="text-gray-600">El Salvador é conhecido por suas praias para surfistas e suas montanhas.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Guatemala">
+                <img src="assets/img/guatemala/guatemala.jpg" alt="Guatemala" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Guatemala</h3>
+                    <p class="text-gray-600">A Guatemala é famosa por suas antigas ruínas maias e paisagens montanhosas.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Honduras">
+                <img src="assets/img/honduras/honduras.png" alt="Honduras" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Honduras</h3>
+                    <p class="text-gray-600">Honduras é conhecida por suas ruínas maias e belas praias caribenhas.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="México">
+                <img src="assets/img/mexico/mexico.png" alt="México" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">México</h3>
+                    <p class="text-gray-600">O México é famoso por sua rica cultura, comida e sítios arqueológicos.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Nicarágua">
+                <img src="assets/img/nicaragua/nicaragua.png" alt="Nicarágua" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Nicarágua</h3>
+                    <p class="text-gray-600">A Nicarágua é conhecida por seus lagos e vulcões impressionantes.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Panamá">
+                <img src="assets/img/panama/panama.png" alt="Panamá" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Panamá</h3>
+                    <p class="text-gray-600">O Panamá é famoso pelo Canal do Panamá, uma importante rota marítima.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Paraguai">
+                <img src="assets/img/paraguai/paraguai.png" alt="Paraguai" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Paraguai</h3>
+                    <p class="text-gray-600">O Paraguai é conhecido por sua rica cultura indígena e paisagens naturais.</p>
+                </div>
+            </div>
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Peru">
+                <img src="assets/img/peru/peru.png" alt="Peru" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Peru</h3>
+                    <p class="text-gray-600">O Peru é famoso por Machu Picchu e sua diversidade cultural.</p>
+                </div>
+            </div>
+            
+            <a href="sobre.html" class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="República Dominicana">
+                <img src="assets/img/republica_dominicana/republica_dominicana.png" alt="República Dominicana" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">República Dominicana</h3>
+                    <p class="text-gray-600">A República Dominicana é conhecida por suas praias de areia branca e resorts.</p>
+                </div>
+            </a>            
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Uruguai">
                 <img src="assets/img/uruaguai/uruguai.png" alt="Uruguai" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-600">Uruguai</h3>
-                    <p class="text-gray-600">O Uruguai é um país da América do Sul conhecido pelo interior verdejante e pelo litoral repleto de praias.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-red-600">Uruguai</h3>
+                    <p class="text-gray-600">O Uruguai é famoso por suas praias, vinhos e a cidade de Montevidéu.</p>
                 </div>
             </div>
-
-            <!-- Venezuela -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="assets/img/venezuela/venezuela.png" alt="Argentina" class="w-full h-48 object-cover">
+            
+            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Venezuela">
+                <img src="assets/img/venezuela/venezuela.png" alt="Venezuela" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-red-600">Venezuela</h3>
-                    <p class="text-gray-600">A Argentina é um países localizado na America do Sul, O país é conhecido também por sua dança e sua música, o tango.</p>
+                    <p class="text-gray-600">A Venezuela é conhecida por suas paisagens naturais e a famosa Angel Falls.</p>
                 </div>
             </div>
+            
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="about" class="bg-gray-800 text-white py-6 mt-12">
+     <!-- Footer -->
+     <footer id="about" class="bg-gray-800 text-white py-6 mt-12">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Atlas. Todos os direitos reservados.</p>
             <p><a href="#" class="hover:underline">Política de Privacidade</a> | <a href="#" class="hover:underline">Termos de Uso</a></p>
@@ -234,4 +218,21 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.bundle.min.js"></script>
+    <script>
+        function filterCountries() {
+            const input = document.getElementById('search');
+            const filter = input.value.toLowerCase();
+            const countryCards = document.getElementsByClassName('country-card');
+
+            for (let i = 0; i < countryCards.length; i++) {
+                const country = countryCards[i].getAttribute('data-country').toLowerCase();
+                if (country.includes(filter)) {
+                    countryCards[i].style.display = "block"; // Mostra o país
+                } else {
+                    countryCards[i].style.display = "none"; // Esconde o país
+                }
+            }
+        }
+    </script>
+</body>
 </html>
