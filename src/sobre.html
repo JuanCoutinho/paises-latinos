@@ -1,238 +1,240 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Países</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>República Dominicana - Sobre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/home.css">
     <style>
-        /* Estilo para esconder os países que não correspondem à pesquisa */
-        .country-card {
-            display: block;
+        /* Adiciona um efeito de zoom ao passar o mouse na imagem de fundo */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+        
+        /* Estilo do footer */
+        .footer {
+            background-color: #1f2937; /* Gray-800 */
+            color: white;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-4xl font-extrabold">Atlas</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:underline text-lg">Home</a></li>
-                    <li><a href="#countries" class="hover:underline text-lg">Países</a></li>
-                    <li><a href="#about" class="hover:underline text-lg">Sobre</a></li>
-                </ul>
-            </nav>
+
+<body class="font-poppins bg-gray-100 text-gray-800">
+
+    <nav class="bg-gray-900 border-gray-700">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="assets/img/republica_dominicana/republica_dominicana.png" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">República Dominicana</span>
+          </a>
+          <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900 dark:bg-gray-800">
+              <li>
+                <a href="sobre.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="pontos_turisticos.html" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-300 md:dark:hover:text-blue-500">Pontos Turísticos</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
+      </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-cover bg-center h-80" style="background-image: url('img/ata.jpg');">
-        <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
-            <div class="text-center text-white">
-                <h2 class="text-3xl md:text-5xl font-bold">Explore o Mundo de Onde Você Estiver</h2>
-                <p class="mt-4 text-lg">Uma jornada pelos países mais incríveis do planeta.</p>
-                <a href="#countries" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-full text-lg font-medium">Comece a Explorar</a>
-            </div>
+<section class="relative w-full h-screen hero-bg bg-cover bg-center flex flex-col justify-center items-center" style="background-image: url('assets/img/republica_dominicana/punta-cana.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Removido rounded-lg -->
+    <div class="relative text-center z-10 p-4">
+        <h1 class="text-white text-4xl md:text-6xl font-bold mb-4">República Dominicana</h1>
+        <p class="text-white text-lg md:text-xl mb-6">Descubra as maravilhas deste paraíso caribenho.</p>
+        <a href="#about" class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition">Explorar</a>
+    </div>
+    <div class="relative z-10 mt-6 flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 p-4">
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center"> <!-- Removido rounded-lg -->
+            <h3 class="text-xl md:text-2xl font-bold">Cultura</h3>
+            <p class="text-gray-600 mt-2">Conheça a vibrante cultura do país.</p>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container mx-auto my-12 px-4 md:px-0">
-        <section id="intro" class="text-center">
-            <h2 class="text-2xl font-semibold text-gray-700">Conheça Diversos Países ao Redor do Mundo</h2>
-            <p class="mt-4 text-gray-600">Descubra as maravilhas culturais, naturais e tecnológicas que cada país tem a oferecer.</p>
-        </section>
-
-        <!-- Seção de Pesquisa -->
-        <section class="mt-6">
-            <input type="text" id="search" placeholder="Pesquise por um país..." class="w-full p-2 border border-gray-300 rounded-md" onkeyup="filterCountries()">
-        </section>
-
-        <!-- Seção dos Países -->
-        <section id="countries" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Argentina -->
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Argentina">
-                <img src="assets/img/argentina/argentina.png" alt="Argentina" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Argentina</h3>
-                    <p class="text-gray-600">A Argentina é um país localizado na América do Sul, conhecido por sua dança e sua música, o tango.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Bolívia">
-                <img src="assets/img/bolivia/bolivia.png" alt="Bolívia" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Bolívia</h3>
-                    <p class="text-gray-600">A Bolívia é um país localizado na América do Sul, conhecido por sua rica cultura indígena.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Brasil">
-                <img src="assets/img/brasil/brasil.jpg" alt="Brasil" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Brasil</h3>
-                    <p class="text-gray-600">O Brasil é o maior país da América do Sul, famoso pelo Carnaval e sua diversidade cultural.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Chile">
-                <img src="assets/img/chile/chile.png" alt="Chile" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Chile</h3>
-                    <p class="text-gray-600">O Chile é conhecido por suas paisagens diversificadas, que vão do deserto ao gelo.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Colômbia">
-                <img src="assets/img/colombia/colombia.png" alt="Colômbia" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Colômbia</h3>
-                    <p class="text-gray-600">A Colômbia é conhecida por seu café, suas paisagens tropicais e sua vibrante cultura.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Costa Rica">
-                <img src="assets/img/costa rica/costa_rica.png" alt="Costa Rica" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Costa Rica</h3>
-                    <p class="text-gray-600">A Costa Rica é famosa por sua biodiversidade e belas praias.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Cuba">
-                <img src="assets/img/cuba/cuba.png" alt="Cuba" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Cuba</h3>
-                    <p class="text-gray-600">Cuba é conhecida por suas belas praias e rica história cultural.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Equador">
-                <img src="assets/img/equador/equador.png" alt="Equador" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Equador</h3>
-                    <p class="text-gray-600">O Equador é famoso por suas ilhas Galápagos e biodiversidade.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="El Salvador">
-                <img src="assets/img/el_salvador/el_salvador.png" alt="El Salvador" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">El Salvador</h3>
-                    <p class="text-gray-600">El Salvador é conhecido por suas praias para surfistas e suas montanhas.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Guatemala">
-                <img src="assets/img/guatemala/guatemala.jpg" alt="Guatemala" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Guatemala</h3>
-                    <p class="text-gray-600">A Guatemala é famosa por suas antigas ruínas maias e paisagens montanhosas.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Honduras">
-                <img src="assets/img/honduras/honduras.png" alt="Honduras" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Honduras</h3>
-                    <p class="text-gray-600">Honduras é conhecida por suas ruínas maias e belas praias caribenhas.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="México">
-                <img src="assets/img/mexico/mexico.png" alt="México" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">México</h3>
-                    <p class="text-gray-600">O México é famoso por sua rica cultura, comida e sítios arqueológicos.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Nicarágua">
-                <img src="assets/img/nicaragua/nicaragua.png" alt="Nicarágua" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Nicarágua</h3>
-                    <p class="text-gray-600">A Nicarágua é conhecida por seus lagos e vulcões impressionantes.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Panamá">
-                <img src="assets/img/panama/panama.png" alt="Panamá" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Panamá</h3>
-                    <p class="text-gray-600">O Panamá é famoso pelo Canal do Panamá, uma importante rota marítima.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Paraguai">
-                <img src="assets/img/paraguai/paraguai.png" alt="Paraguai" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Paraguai</h3>
-                    <p class="text-gray-600">O Paraguai é conhecido por sua rica cultura indígena e paisagens naturais.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Peru">
-                <img src="assets/img/peru/peru.png" alt="Peru" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Peru</h3>
-                    <p class="text-gray-600">O Peru é famoso por Machu Picchu e sua diversidade cultural.</p>
-                </div>
-            </div>
-            
-            <a href="sobre.html" class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="República Dominicana">
-                <img src="assets/img/republica_dominicana/republica_dominicana.png" alt="República Dominicana" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">República Dominicana</h3>
-                    <p class="text-gray-600">A República Dominicana é conhecida por suas praias de areia branca e resorts.</p>
-                </div>
-            </a>            
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Uruguai">
-                <img src="assets/img/uruaguai/uruguai.png" alt="Uruguai" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Uruguai</h3>
-                    <p class="text-gray-600">O Uruguai é famoso por suas praias, vinhos e a cidade de Montevidéu.</p>
-                </div>
-            </div>
-            
-            <div class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="Venezuela">
-                <img src="assets/img/venezuela/venezuela.png" alt="Venezuela" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-red-600">Venezuela</h3>
-                    <p class="text-gray-600">A Venezuela é conhecida por suas paisagens naturais e a famosa Angel Falls.</p>
-                </div>
-            </div>
-            
-        </section>
-    </main>
-
-     <!-- Footer -->
-     <footer id="about" class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Atlas. Todos os direitos reservados.</p>
-            <p><a href="#" class="hover:underline">Política de Privacidade</a> | <a href="#" class="hover:underline">Termos de Uso</a></p>
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center"> <!-- Removido rounded-lg -->
+            <h3 class="text-xl md:text-2xl font-bold">História</h3>
+            <p class="text-gray-600 mt-2">Explore a rica história da República Dominicana.</p>
         </div>
-    </footer>
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center"> <!-- Removido rounded-lg -->
+            <h3 class="text-xl md:text-2xl font-bold">Geografia</h3>
+            <p class="text-gray-600 mt-2">Descubra as maravilhas naturais.</p>
+        </div>
+    </div>
+</section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.bundle.min.js"></script>
-    <script>
-        function filterCountries() {
-            const input = document.getElementById('search');
-            const filter = input.value.toLowerCase();
-            const countryCards = document.getElementsByClassName('country-card');
 
-            for (let i = 0; i < countryCards.length; i++) {
-                const country = countryCards[i].getAttribute('data-country').toLowerCase();
-                if (country.includes(filter)) {
-                    countryCards[i].style.display = "block"; // Mostra o país
-                } else {
-                    countryCards[i].style.display = "none"; // Esconde o país
-                }
-            }
-        }
-    </script>
+ <!-- Seções Sobre -->
+ <div class="max-w-[80%] mx-auto py-10 space-y-16">
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in" id="about">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">História</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          A República Dominicana foi o local onde Cristóvão Colombo desembarcou em sua primeira viagem ao Novo Mundo em 1492, e Santo Domingo, a capital, foi a primeira cidade europeia fundada nas Américas. A ilha foi inicialmente chamada de Hispaniola e foi colonizada pela Espanha, tornando-se um importante centro de poder durante a era colonial.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">Cultura</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          A cultura dominicana é uma mistura de influências indígenas Taíno, africanas e espanholas. A música e a dança são elementos centrais da vida cotidiana, com gêneros como merengue e bachata desempenhando um papel importante na identidade nacional. O país também é famoso por suas festas populares e eventos esportivos, como o beisebol, que é o esporte nacional.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">Geografia</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          Localizada no Caribe, a República Dominicana compartilha a ilha de Hispaniola com o Haiti. A paisagem dominicana é diversa, com montanhas, florestas tropicais e praias espetaculares que atraem turistas de todo o mundo. O pico mais alto das Antilhas, o Pico Duarte, também está localizado aqui.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">Economia</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          A economia da República Dominicana é uma das mais fortes do Caribe, impulsionada principalmente pelo turismo, agricultura e exportação de produtos como café, açúcar e tabaco. O setor de serviços, especialmente relacionado ao turismo, desempenha um papel fundamental na economia nacional.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">População</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          A população dominicana é de cerca de 10 milhões de pessoas, com uma grande diversidade étnica. A maior parte da população vive nas áreas urbanas, com Santo Domingo sendo a maior cidade e capital.
+      </p>
+  </section>
+</div>
+
+<!-- Seção Carrossel -->
+<section class="max-w-[80%] mx-auto py-10">
+  <h2 class="text-4xl font-semibold text-gray-800 mb-4">Galeria</h2>
+  <div class="relative">
+      <div id="carousel" class="overflow-hidden">
+          <div class="flex transition-transform duration-500" id="slides">
+              <div class="min-w-full">
+                  <img src="assets/img/republica_dominicana/punta-cana.jpg" alt="Punta Cana" class="w-full h-64 object-cover rounded-lg shadow-md">
+              </div>
+              <div class="min-w-full">
+                  <img src="assets/img/republica_dominicana/cultura.jpg" alt="Cultura" class="w-full h-64 object-cover rounded-lg shadow-md">
+              </div>
+              <div class="min-w-full">
+                  <img src="assets/img/republica_dominicana/geografia.jpg" alt="Geografia" class="w-full h-64 object-cover rounded-lg shadow-md">
+              </div>
+          </div>
+      </div>
+      <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full">❮</button>
+      <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full">❯</button>
+  </div>
+</section>
+
+<!-- Seção Acordeão -->
+<section class="max-w-[80%] mx-auto py-10">
+  <h2 class="text-4xl font-semibold text-gray-800 mb-4">Informações Adicionais</h2>
+  <div class="space-y-4">
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+          <button class="flex justify-between w-full text-left text-gray-800 font-semibold" onclick="toggleAccordion('item1')">
+              <span>Curiosidade 1</span>
+              <span class="transform transition-transform duration-200" id="icon-item1">➕</span>
+          </button>
+          <div id="item1" class="hidden pl-4 text-gray-600">
+              A República Dominicana tem as primeiras universidades e igrejas das Américas.
+          </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+          <button class="flex justify-between w-full text-left text-gray-800 font-semibold" onclick="toggleAccordion('item2')">
+              <span>Curiosidade 2</span>
+              <span class="transform transition-transform duration-200" id="icon-item2">➕</span>
+          </button>
+          <div id="item2" class="hidden pl-4 text-gray-600">
+              O merengue é considerado o ritmo nacional da República Dominicana.
+          </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+          <button class="flex justify-between w-full text-left text-gray-800 font-semibold" onclick="toggleAccordion('item3')">
+              <span>Curiosidade 3</span>
+              <span class="transform transition-transform duration-200" id="icon-item3">➕</span>
+          </button>
+          <div id="item3" class="hidden pl-4 text-gray-600">
+              A República Dominicana é famosa por suas praias de areia branca e águas cristalinas.
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<footer class="footer py-6">
+  <div class="max-w-[90%] mx-auto text-center">
+      <p>&copy; 2024 República Dominicana. Todos os direitos reservados.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+      </div>
+  </div>
+</footer>
+
+<script>
+  // Carrossel automático
+  let index = 0;
+  const slides = document.getElementById('slides').children;
+
+  function showSlide(i) {
+      index = (i + slides.length) % slides.length;
+      for (let j = 0; j < slides.length; j++) {
+          slides[j].style.display = (j === index) ? 'block' : 'none';
+      }
+  }
+
+  document.getElementById('next').onclick = () => {
+      showSlide(index + 1);
+  };
+
+  document.getElementById('prev').onclick = () => {
+      showSlide(index - 1);
+  };
+
+  // Iniciar carrossel automático
+  setInterval(() => {
+      showSlide(index + 1);
+  }, 3000); // 3 segundos
+
+  // Acordeão
+  function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+      if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          icon.innerText = '➖';
+      } else {
+          content.classList.add('hidden');
+          icon.innerText = '➕';
+      }
+  }
+
+  // Efeito de fade-in
+  document.addEventListener("DOMContentLoaded", () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(el => {
+          el.classList.add('visible');
+      });
+  });
+</script>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navbar = document.getElementById('navbar-default');
+      navbar.classList.toggle('hidden');
+    });
+  </script>
 </body>
+
 </html>

@@ -10,19 +10,23 @@
 
 <body class="font-poppins bg-black text-gray-300">
     
-    <header
-    class="max-w-[90%] mx-auto grid grid-cols-[50px_1fr_50px] grid-rows-[50px] justify-center items-center relative z-10">
-    <div class="font-bold text-lg">Atlas</div>
-    <ul class="flex justify-center gap-5 font-medium">
-        <a href="index.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Home</a>
-        <a href="sobre.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Sobre</a>
-        <a href="pontos_turisticos.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Pontos
-            Turísticos</a>
-        <a href="food.html"
-            class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Gastronomia</a>
-    </ul>
-    </header>
-
+        <header class="max-w-[90%] mx-auto grid grid-cols-[50px_1fr_50px] grid-rows-[50px] justify-center items-center relative z-10">
+            <a href="assets/img/republica_dominicana/republica_dominicana.png"></a>
+            
+            <!-- Navbar para telas grandes -->
+            <ul class="hidden md:flex justify-center gap-5 font-medium">
+                <a href="index.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Home</a>
+                <a href="sobre.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Sobre</a>
+                <a href="pontos_turisticos.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Pontos Turísticos</a>
+                <a href="food.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Gastronomia</a>
+            </ul>
+        
+            <!-- Botão de Voltar para telas pequenas -->
+            <div class="md:hidden flex justify-center">
+                <a href="sobre.html" class="no-underline text-gray-300 rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-700 text-lg">Voltar</a>
+            </div>
+        </header>
+    
     <div class="relative h-screen -mt-[50px]">
         <div class="absolute inset-0">
             <div class="relative w-full h-full overflow-hidden opacity-1 transition-opacity duration-500 item active">
