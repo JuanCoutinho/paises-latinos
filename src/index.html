@@ -11,25 +11,46 @@
         .country-card {
             display: block;
         }
+
+        /* Estilizando a scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a202c; /* Cor do fundo da scrollbar (bg-gray-900) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5ed0c4; /* Cor verde água suave */
+    border-radius: 6px; /* Bordas arredondadas */
+    border: 3px solid #1a202c; /* Cor do fundo ao redor do "polegar" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #50c2b5; /* Cor do "polegar" ao passar o mouse */
+}
+
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-4xl font-extrabold">Beyond</h1>
-            <nav>
-                <ul class="flex space-x-6">
+          <h1 class="text-4xl font-extrabold p-2">Beyond</h1> 
+          <nav>
+                <ul class="flex space-x-6 p-2">
                     <li><a href="index.html" class="hover:underline text-lg">Home</a></li>
                     <li><a href="#countries" class="hover:underline text-lg">Países</a></li>
                     <li><a href="#about" class="hover:underline text-lg">Sobre</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>      
+     
 
     <!-- Hero Section -->
-    <section class="bg-cover bg-center h-80" style="background-image: url('img/ata.jpg');">
+    <section class="bg-cover bg-center h-80" style="background-image: url('https://www.shutterstock.com/image-photo/high-angle-view-different-latin-600nw-2477373211.jpg');">
         <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
             <div class="text-center text-white">
                 <h2 class="text-3xl md:text-5xl font-bold">Explore o Mundo de Onde Você Estiver</h2>
@@ -47,12 +68,13 @@
         </section>
 
         <!-- Seção de Pesquisa -->
-        <section class="mt-6">
-            <input type="text" id="search" placeholder="Pesquise por um país..." class="w-full p-2 border border-gray-300 rounded-md" onkeyup="filterCountries()">
-        </section>
+        <section class="mt-6 p-10">
+          <input type="text" id="search" placeholder="Pesquise por um país..." class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition duration-300 ease-in-out text-gray-700 bg-gray-50" onkeyup="filterCountries()">
+      </section>
+      
 
         <!-- Seção dos Países -->
-        <section id="countries" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section id="countries" class="mt-12 p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Argentina -->
             <a href="sobre_argentina.html" class="country-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" data-country="República Dominicana">
                 <img src="assets/img/argentina/argentina.png" alt="República Dominicana" class="w-full h-48 object-cover">
@@ -218,20 +240,20 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.bundle.min.js"></script>
     <script>
-        function filterCountries() {
-            const input = document.getElementById('search');
-            const filter = input.value.toLowerCase();
-            const countryCards = document.getElementsByClassName('country-card');
+   function filterCountries() {
+    const searchTerm = document.getElementById("search").value.toLowerCase();
+    const countryCards = document.querySelectorAll(".country-card");
 
-            for (let i = 0; i < countryCards.length; i++) {
-                const country = countryCards[i].getAttribute('data-country').toLowerCase();
-                if (country.includes(filter)) {
-                    countryCards[i].style.display = "block"; // Mostra o país
-                } else {
-                    countryCards[i].style.display = "none"; // Esconde o país
-                }
-            }
+    countryCards.forEach(card => {
+        const countryName = card.querySelector("h3").innerText.toLowerCase();
+        if (countryName.includes(searchTerm)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
         }
+    });
+}
+
     </script>
 </body>
 </html>
