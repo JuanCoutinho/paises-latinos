@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasil - Sobre</title>
+    <title>Bolívia - Sobre</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/home.css">
     <style>
@@ -16,9 +16,9 @@
         .fade-in.visible {
             opacity: 1;
         }
-
+        
         .footer {
-            background-color: #1f2937;
+            background-color: #1f2937; /* Gray-800 */
             color: white;
         }
     </style>
@@ -29,8 +29,8 @@
     <nav class="bg-gray-900 border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="sobre.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="assets/img/brasil/brasil.jpg" class="h-8" alt="Brasil Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Brasil</span>
+            <img src="assets/img/bolivia/bolivia.png" class="h-8" alt="Bolívia Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Bolívia</span>
           </a>
           <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Abrir menu principal</span>
@@ -39,94 +39,92 @@
             </svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900 dark:bg-gray-800">
               <li>
-                <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Início</a>
+                <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="pontos_turisticos_brasil.html" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Pontos Turísticos</a>
+                <a href="pontos_turisticos_bolivia.html" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-300 md:dark:hover:text-blue-500">Pontos Turísticos</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <section class="relative w-full h-screen hero-bg bg-cover bg-center flex flex-col justify-center items-center" style="background-image: url('assets/img/brasil/cristo_redentor.jpg')">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative text-center z-10 p-4">
-            <h1 class="text-white text-4xl md:text-6xl font-bold mb-4">Brasil</h1>
-            <p class="text-white text-lg md:text-xl mb-6">Descubra as maravilhas deste país cheio de cultura e história.</p>
-            <a href="#about" class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition">Explorar</a>
+<section class="relative w-full h-screen hero-bg bg-cover bg-center flex flex-col justify-center items-center" style="background-image: url('assets/img/bolivia/salar_de_uyuni.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative text-center z-10 p-4">
+        <h1 class="text-white text-4xl md:text-6xl font-bold mb-4">Bolívia</h1>
+        <p class="text-white text-lg md:text-xl mb-6">Descubra as maravilhas deste país rico em cultura e história.</p>
+        <a href="#about" class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition">Explorar</a>
+    </div>
+    <div class="relative z-10 mt-6 flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 p-4">
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
+            <h3 class="text-xl md:text-2xl font-bold">Cultura</h3>
+            <p class="text-gray-600 mt-2">Explore a rica e diversificada cultura boliviana.</p>
         </div>
-        <div class="relative z-10 mt-6 flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 p-4">
-            <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
-                <h3 class="text-xl md:text-2xl font-bold">Cultura</h3>
-                <p class="text-gray-600 mt-2">Explore a vibrante cultura brasileira.</p>
-            </div>
-            <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
-                <h3 class="text-xl md:text-2xl font-bold">História</h3>
-                <p class="text-gray-600 mt-2">Conheça a fascinante história do Brasil.</p>
-            </div>
-            <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
-                <h3 class="text-xl md:text-2xl font-bold">Geografia</h3>
-                <p class="text-gray-600 mt-2">Descubra as belezas naturais do Brasil.</p>
-            </div>
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
+            <h3 class="text-xl md:text-2xl font-bold">História</h3>
+            <p class="text-gray-600 mt-2">Conheça a história fascinante da Bolívia.</p>
         </div>
-    </section>
-    
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
+            <h3 class="text-xl md:text-2xl font-bold">Geografia</h3>
+            <p class="text-gray-600 mt-2">Descubra as maravilhas naturais da Bolívia.</p>
+        </div>
+    </div>
+</section>
 
-<!-- Seções Sobre -->
-<div class="max-w-[80%] mx-auto py-10 space-y-16">
+ <!-- Seções Sobre -->
+ <div class="max-w-[80%] mx-auto py-10 space-y-16">
   <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in" id="about">
       <h2 class="text-4xl font-semibold text-gray-800 mb-4">História</h2>
       <p class="text-lg text-gray-600 leading-relaxed">
-          O Brasil é um país rico em história, com uma herança que inclui culturas indígenas e influências coloniais portuguesas. O Brasil conquistou sua independência em 1822.
+          A Bolívia é um país com uma rica história, tendo sido habitada por diversas civilizações indígenas, como os Aymaras e Quechuas. O país conquistou sua independência da Espanha em 1825.
       </p>
   </section>
 
   <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
       <h2 class="text-4xl font-semibold text-gray-800 mb-4">Cultura</h2>
       <p class="text-lg text-gray-600 leading-relaxed">
-          A cultura brasileira é uma mistura vibrante de influências indígenas, africanas e europeias. O Brasil é famoso por sua música, como samba e bossa nova, além de sua culinária diversificada.
+          A cultura boliviana é uma mistura vibrante de tradições indígenas e influências espanholas. A Bolívia é famosa por suas festividades, danças folclóricas e culinária única, como o salteña e a api.
       </p>
   </section>
 
   <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
       <h2 class="text-4xl font-semibold text-gray-800 mb-4">Geografia</h2>
       <p class="text-lg text-gray-600 leading-relaxed">
-          O Brasil possui uma geografia diversa, incluindo florestas tropicais na Amazônia, montanhas, praias e vastos campos. O Rio de Janeiro e a Amazônia são destinos turísticos icônicos.
+          A Bolívia possui uma geografia diversificada, que varia de montanhas andinas a florestas tropicais na Amazônia e o famoso Salar de Uyuni, o maior deserto de sal do mundo.
       </p>
   </section>
 
   <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
       <h2 class="text-4xl font-semibold text-gray-800 mb-4">Economia</h2>
       <p class="text-lg text-gray-600 leading-relaxed">
-          A economia brasileira é uma das maiores da América Latina, destacando-se pela agricultura, indústria e serviços. O Brasil é um dos principais exportadores de café do mundo.
+          A economia boliviana é baseada em setores como mineração, agricultura e gás natural. O país é rico em recursos naturais, incluindo lítio, que é cada vez mais valorizado no mercado global.
       </p>
   </section>
 
   <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
       <h2 class="text-4xl font-semibold text-gray-800 mb-4">População</h2>
       <p class="text-lg text-gray-600 leading-relaxed">
-          O Brasil tem uma população de aproximadamente 213 milhões de pessoas, sendo um dos países mais populosos do mundo. Brasília é a capital do Brasil e um importante centro político.
+          A Bolívia possui uma população de cerca de 12 milhões de pessoas, com uma rica diversidade étnica e cultural. Sucre é a capital constitucional, enquanto La Paz é a sede do governo.
       </p>
   </section>
 </div>
 
-<!-- Seção Carrossel -->
 <section class="max-w-[80%] mx-auto py-10">
     <h2 class="text-4xl font-semibold text-gray-800 mb-4">Galeria</h2>
     <div class="relative">
         <div id="carousel" class="overflow-hidden">
             <div class="flex transition-transform duration-500" id="slides">
                 <div class="min-w-full">
-                    <img src="assets/img/brasil/cristo_redentor.jpg" alt="Cristo Redentor" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="assets/img/bolivia/salar_de_uyuni.jpg" alt="Salar de Uyuni" class="w-full h-64 object-cover rounded-lg shadow-md">
                 </div>
                 <div class="min-w-full">
-                    <img src="assets/img/brasil/amazonas.jpg" alt="Amazônia" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="assets/img/bolivia/la_paz.jpg" alt="La Paz" class="w-full h-64 object-cover rounded-lg shadow-md">
                 </div>
                 <div class="min-w-full">
-                    <img src="assets/img/brasil/sugarloaf.jpg" alt="Pão de Açúcar" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="assets/img/bolivia/tiwanaku.jpg" alt="Tiwanaku" class="w-full h-64 object-cover rounded-lg shadow-md">
                 </div>
             </div>
         </div>
@@ -135,7 +133,8 @@
     </div>
 </section>
 
-  <section class="max-w-[80%] mx-auto py-10">
+<!-- Seção Acordeão -->
+<section class="max-w-[80%] mx-auto py-10">
     <h2 class="text-4xl font-semibold text-gray-800 mb-4">Informações Adicionais</h2>
     <div class="space-y-6">
         <div class="bg-white p-8 rounded-lg shadow-lg">
@@ -144,7 +143,7 @@
                 <span class="transform transition-transform duration-200" id="icon-item1">➕</span>
             </button>
             <div id="item1" class="hidden pl-4 text-gray-600">
-                O Brasil é o maior país da América do Sul e possui a maior floresta tropical do mundo, a Amazônia.
+                A Bolívia abriga o Salar de Uyuni, o maior deserto de sal do mundo, que é uma atração turística icônica.
             </div>
         </div>
         <div class="bg-white p-8 rounded-lg shadow-lg">
@@ -153,7 +152,7 @@
                 <span class="transform transition-transform duration-200" id="icon-item2">➕</span>
             </button>
             <div id="item2" class="hidden pl-4 text-gray-600">
-                O Brasil é famoso pelo Carnaval, uma das maiores festas do mundo, celebrada com desfiles e muita música.
+                La Paz, a capital da Bolívia, é a capital mais alta do mundo, situada a mais de 3.600 metros acima do nível do mar.
             </div>
         </div>
         <div class="bg-white p-8 rounded-lg shadow-lg">
@@ -162,16 +161,16 @@
                 <span class="transform transition-transform duration-200" id="icon-item3">➕</span>
             </button>
             <div id="item3" class="hidden pl-4 text-gray-600">
-                O futebol é uma paixão nacional no Brasil, e o país já venceu a Copa do Mundo cinco vezes.
+                O sítio arqueológico de Tiwanaku, próximo ao Lago Titicaca, é um dos mais importantes vestígios da civilização andina.
             </div>
         </div>
     </div>
 </section>
 
-<!-- Rodapé -->
-<footer class="footer py-6">
+
+  <footer class="footer py-6">
     <div class="max-w-[90%] mx-auto text-center">
-        <p>&copy; 2024 Brasil. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Peru. Todos os direitos reservados.</p>
         <div class="flex justify-center space-x-4 mt-4">
             <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
             <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
@@ -228,6 +227,6 @@
         navbar.classList.toggle('hidden');
       });
   </script>
-</body>
 
+</body>
 </html>
