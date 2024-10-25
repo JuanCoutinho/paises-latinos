@@ -1,0 +1,94 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honduras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="font-poppins bg-black text-gray-300">
+    
+    <header class="max-w-[90%] mx-auto grid grid-cols-[50px_1fr_50px] grid-rows-[50px] justify-center items-center relative z-10">
+        <a href="assets/img/honduras/honduras.png"></a>
+        
+        <!-- Navbar para telas grandes -->
+        <ul class="hidden md:flex justify-center gap-5 font-medium">
+            <a href="index.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Home</a>
+            <a href="sobre_honduras.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Sobre</a>
+            <a href="pontos_turisticos_honduras.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Pontos Turísticos</a>
+        </ul>
+    
+        <!-- Botão de Voltar para telas pequenas -->
+        <div class="md:hidden flex justify-center">
+            <a href="sobre.html" class="no-underline text-gray-300 rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-700 text-lg">Voltar</a>
+        </div>
+    </header>
+
+    <div class="relative h-screen -mt-[50px]">
+        <div class="absolute inset-0">
+            <div class="relative w-full h-full overflow-hidden opacity-1 transition-opacity duration-500 item active">
+                <!-- Camada de gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <img src="assets/img/honduras/roatan.jpeg" class="object-cover w-full h-full min-h-[100vh]">
+                <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
+                    <h2 class="text-[50px] md:text-[100px] m-0">Roatán</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Roatán é uma ilha no Caribe hondurenho, famosa por suas praias de areia branca e recifes de coral, ideal para mergulho e snorkeling.</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-0 transition-opacity duration-500 item">
+                <!-- Camada de gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <img src="assets/img/honduras/tegucigalpa.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
+                    <h2 class="text-[50px] md:text-[100px] m-0">Tegucigalpa</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Tegucigalpa, a capital de Honduras, é conhecida por suas montanhas circundantes e arquitetura colonial, além de ser um centro cultural e político.</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-0 transition-opacity duration-500 item">
+                <!-- Camada de gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <img src="assets/img/honduras/copan.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
+                    <h2 class="text-[50px] md:text-[100px] m-0">Copán</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Copán é um importante sítio arqueológico maia, conhecido por suas impressionantes estelas e templos, que atraem turistas de todo o mundo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="absolute top-[30%] right-5 md:right-10 z-20 flex flex-col gap-2">
+            <button id="prev"
+                class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">←</button>
+            <button id="next"
+                class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">→</button>
+        </div>
+
+        <!-- Miniaturas -->
+        <div class="absolute bottom-[50px] w-full px-4 md:px-10 flex gap-4 overflow-auto justify-end">
+            <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail active" data-index="0">
+                <img src="assets/img/honduras/roatan.jpeg" class="w-full h-full object-cover rounded-md">
+                <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
+                    Roatán
+                </div>
+            </div>
+            <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail" data-index="1">
+                <img src="assets/img/honduras/tegucigalpa.jpg" class="w-full h-full object-cover rounded-md">
+                <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
+                    Tegucigalpa
+                </div>
+            </div>
+            <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail" data-index="2">
+                <img src="assets/img/honduras/copan.jpg" class="w-full h-full object-cover rounded-md">
+                <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
+                    Copán
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honduras - Sobre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/home.css" />
+    <style>
+      .fade-in {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+      }
+
+      .footer {
+        background-color: #1f2937; /* Gray-800 */
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="font-poppins bg-gray-100 text-gray-800">
+    <nav class="bg-gray-900 border-gray-700">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="sobre.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="assets/img/honduras/honduras.png"
+            class="h-8"
+            alt="Honduras Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+            >Honduras</span
+          >
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menu principal</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900 dark:bg-gray-800"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="pontos_turisticos_honduras.html"
+                class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-300 md:dark:hover:text-blue-500"
+                >Pontos Turísticos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="relative w-full h-screen hero-bg bg-cover bg-center flex flex-col justify-center items-center"
+      style="background-image: url('assets/img/honduras/roatan.jpeg')"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative text-center z-10 p-4">
+        <h1 class="text-white text-4xl md:text-6xl font-bold mb-4">Honduras</h1>
+        <p class="text-white text-lg md:text-xl mb-6">
+          Explore a beleza e a diversidade deste incrível país da América
+          Central.
+        </p>
+        <a
+          href="#about"
+          class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition"
+          >Explorar</a
+        >
+      </div>
+      <div
+        class="relative z-10 mt-6 flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 p-4"
+      >
+        <div
+          class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center"
+        >
+          <h3 class="text-xl md:text-2xl font-bold">Cultura</h3>
+          <p class="text-gray-600 mt-2">
+            Descubra a rica e vibrante cultura hondurenha.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center"
+        >
+          <h3 class="text-xl md:text-2xl font-bold">História</h3>
+          <p class="text-gray-600 mt-2">
+            Mergulhe na história fascinante de Honduras.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center"
+        >
+          <h3 class="text-xl md:text-2xl font-bold">Geografia</h3>
+          <p class="text-gray-600 mt-2">
+            Explore as belezas naturais de Honduras.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seções Sobre -->
+    <div class="max-w-[80%] mx-auto py-10 space-y-16">
+      <section
+        class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in"
+        id="about"
+      >
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">História</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Honduras tem uma rica história que se remonta às civilizações maias,
+          que habitaram a região. O país conquistou sua independência da Espanha
+          em 1821.
+        </p>
+      </section>
+
+      <section
+        class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in"
+      >
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Cultura</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          A cultura hondurenha é uma mistura de influências indígenas e
+          espanholas, refletindo-se na música, na dança e na culinária, com
+          pratos como baleadas e tamales.
+        </p>
+      </section>
+
+      <section
+        class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in"
+      >
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Geografia</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Honduras é conhecida por sua geografia diversificada, incluindo
+          montanhas, florestas tropicais e belíssimas praias, especialmente nas
+          ilhas da Baía, como Roatán.
+        </p>
+      </section>
+
+      <section
+        class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in"
+      >
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Economia</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          A economia hondurenha é baseada principalmente na agricultura, com
+          produtos como café, banana e palmeiras, além do crescimento do setor
+          de turismo.
+        </p>
+      </section>
+
+      <section
+        class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in"
+      >
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">População</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Honduras possui uma população de aproximadamente 10 milhões de
+          pessoas, com uma rica diversidade étnica que inclui grupos indígenas,
+          afro-hondurenhos e mestiços.
+        </p>
+      </section>
+    </div>
+
+    <!-- Seção Carrossel -->
+    <!-- Seção Carrossel -->
+    <section class="max-w-[80%] mx-auto py-10">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">
+        Galeria de Honduras
+      </h2>
+      <div class="relative">
+        <div id="carousel" class="overflow-hidden">
+          <div class="flex transition-transform duration-500" id="slides">
+            <div class="min-w-full">
+              <img
+                src="assets/img/honduras/roatan.jpg"
+                alt="Roatan"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div class="min-w-full">
+              <img
+                src="assets/img/honduras/ruinas_de_copan.jpg"
+                alt="Ruínas de Copán"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div class="min-w-full">
+              <img
+                src="assets/img/honduras/teatro_municipal.jpg"
+                alt="Teatro Municipal de Tegucigalpa"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          id="prev"
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full"
+        >
+          ❮
+        </button>
+        <button
+          id="next"
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full"
+        >
+          ❯
+        </button>
+      </div>
+    </section>
+
+    <!-- Seção Acordeão -->
+    <section class="max-w-[80%] mx-auto py-10">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">
+        Perguntas Frequentes sobre Honduras
+      </h2>
+      <div class="space-y-4">
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer"
+        >
+          <h3 class="text-lg font-semibold text-gray-800">
+            Qual é a capital de Honduras?
+          </h3>
+          <p class="mt-2 text-gray-600 hidden">
+            A capital de Honduras é Tegucigalpa, localizada no centro do país,
+            conhecida por sua rica história e cultura.
+          </p>
+        </div>
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer"
+        >
+          <h3 class="text-lg font-semibold text-gray-800">
+            Quais idiomas são falados em Honduras?
+          </h3>
+          <p class="mt-2 text-gray-600 hidden">
+            O idioma oficial de Honduras é o espanhol, mas várias línguas
+            indígenas também são faladas, incluindo o garífuna e o miskito.
+          </p>
+        </div>
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer"
+        >
+          <h3 class="text-lg font-semibold text-gray-800">
+            Qual é o clima em Honduras?
+          </h3>
+          <p class="mt-2 text-gray-600 hidden">
+            Honduras tem um clima tropical, com uma estação seca e uma estação
+            chuvosa, variando conforme a região, incluindo montanhas e costas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer py-10">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Brasil. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbarDefault = document.getElementById("navbar-default");
+      
+        menuToggle.addEventListener("click", () => {
+          navbarDefault.classList.toggle("hidden");
+        });
+      
+        document.addEventListener("DOMContentLoaded", () => {
+          const sections = document.querySelectorAll(".fade-in");
+          const options = {
+            threshold: 0.5,
+          };
+      
+          const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, options);
+      
+          sections.forEach((section) => {
+            observer.observe(section);
+          });
+        });
+      
+        const slides = document.getElementById("slides");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        let currentIndex = 0;
+        const totalSlides = slides.children.length; // Total de slides
+      
+        prev.addEventListener("click", () => {
+          currentIndex = currentIndex > 0 ? currentIndex - 1 : totalSlides - 1; // Ajuste para a última imagem
+          updateSlidePosition();
+        });
+      
+        next.addEventListener("click", () => {
+          currentIndex = currentIndex < totalSlides - 1 ? currentIndex + 1 : 0; // Ajuste para a primeira imagem
+          updateSlidePosition();
+        });
+      
+        function updateSlidePosition() {
+          slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      
+        // Função para avançar automaticamente os slides
+        function autoSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides; // Avança para o próximo slide
+          updateSlidePosition();
+        }
+      
+        // Chama a função autoSlide a cada 3 segundos (3000 milissegundos)
+        setInterval(autoSlide, 3000);
+      
+        const accordions = document.querySelectorAll(".cursor-pointer");
+        accordions.forEach((accordion) => {
+          accordion.addEventListener("click", () => {
+            const p = accordion.querySelector("p");
+            p.classList.toggle("hidden");
+          });
+        });
+      </script>
+      
+  </body>
+</html>
