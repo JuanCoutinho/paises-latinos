@@ -1,0 +1,94 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Rica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="font-poppins bg-black text-gray-300">
+    
+    <header class="max-w-[90%] mx-auto grid grid-cols-[50px_1fr_50px] grid-rows-[50px] justify-center items-center relative z-10">
+        <a href="assets/img/costa_rica/costa_rica.png"></a>
+        
+        <!-- Navbar para telas grandes -->
+        <ul class="hidden md:flex justify-center gap-5 font-medium">
+            <a href="index.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Home</a>
+            <a href="sobre_costa_rica.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Sobre</a>
+            <a href="pontos_turisticos_costa_rica.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Pontos Turísticos</a>
+        </ul>
+    
+        <!-- Botão de Voltar para telas pequenas -->
+        <div class="md:hidden flex justify-center">
+            <a href="sobre.html" class="no-underline text-gray-300 rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-700 text-lg">Voltar</a>
+        </div>
+    </header>
+
+    <div class="relative h-screen -mt-[50px]">
+        <div class="absolute inset-0">
+            <div class="relative w-full h-full overflow-hidden opacity-1 transition-opacity duration-500 item active">
+                <!-- Camada de gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <img src="assets/img/costa_rica/arenal_volcano.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
+                    <h2 class="text-[50px] md:text-[100px] m-0">Vulcão Arenal</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">O Vulcão Arenal é um dos vulcões mais ativos da Costa Rica, famoso por sua forma cônica e pela rica biodiversidade ao seu redor.</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-0 transition-opacity duration-500 item">
+                <!-- Camada de gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <img src="assets/img/costa_rica/san_jose.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
+                    <h2 class="text-[50px] md:text-[100px] m-0">San José</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">San José, a capital da Costa Rica, é conhecida por sua rica cultura, museus e pela arquitetura colonial.</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-0 transition-opacity duration-500 item">
+                <!-- Camada de gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <img src="assets/img/costa_rica/monteverde.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
+                    <h2 class="text-[50px] md:text-[100px] m-0">Monteverde</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Monteverde é uma região famosa por suas florestas de nuvens, biodiversidade e ecoturismo, oferecendo atividades como caminhadas e tirolesa.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="absolute top-[30%] right-5 md:right-10 z-20 flex flex-col gap-2">
+            <button id="prev"
+                class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">←</button>
+            <button id="next"
+                class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">→</button>
+        </div>
+
+        <!-- Miniaturas -->
+        <div class="absolute bottom-[50px] w-full px-4 md:px-10 flex gap-4 overflow-auto justify-end">
+            <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail active" data-index="0">
+                <img src="assets/img/costa_rica/arenal_volcano.jpg" class="w-full h-full object-cover rounded-md">
+                <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
+                    Vulcão Arenal
+                </div>
+            </div>
+            <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail" data-index="1">
+                <img src="assets/img/costa_rica/san_jose.jpg" class="w-full h-full object-cover rounded-md">
+                <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
+                    San José
+                </div>
+            </div>
+            <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail" data-index="2">
+                <img src="assets/img/costa_rica/monteverde.jpg" class="w-full h-full object-cover rounded-md">
+                <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
+                    Monteverde
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>
