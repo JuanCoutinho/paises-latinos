@@ -1,26 +1,25 @@
-<!DOCTYPE html>
 <html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panamá</title>
+    <title>México</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body class="font-poppins bg-black text-gray-300">
-
+    
     <header class="max-w-[90%] mx-auto grid grid-cols-[50px_1fr_50px] grid-rows-[50px] justify-center items-center relative z-10">
-        <a href="assets/img/panama/panama.png"></a>
-
+        <a href="assets/img/mexico/mexico.png"></a>
+        
         <!-- Navbar para telas grandes -->
         <ul class="hidden md:flex justify-center gap-5 font-medium">
             <a href="index.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Home</a>
-            <a href="sobre_panama.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Sobre</a>
-            <a href="pontos_turisticos_panama.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Pontos Turísticos</a>
+            <a href="sobre_mexico.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Sobre</a>
+            <a href="pontos_turisticos_mexico.html" class="no-underline text-gray-300 rounded-md px-2 py-1 hover:bg-gray-700 text-lg">Pontos Turísticos</a>
         </ul>
-
+    
         <!-- Botão de Voltar para telas pequenas -->
         <div class="md:hidden flex justify-center">
             <a href="sobre.html" class="no-underline text-gray-300 rounded-md px-4 py-2 bg-blue-600 hover:bg-blue-700 text-lg">Voltar</a>
@@ -32,59 +31,61 @@
             <div class="relative w-full h-full overflow-hidden opacity-1 transition-opacity duration-500 item active">
                 <!-- Camada de gradiente -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                <img src="assets/img/panama/canal.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <img src="assets/img/mexico/chichen_itza.jpg" class="object-cover w-full h-full min-h-[100vh]">
                 <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
-                    <h2 class="text-[50px] md:text-[100px] m-0">Canal do Panamá</h2>
-                    <p class="text-[14px] md:text-[16px] font-bold">O Canal do Panamá é uma das mais impressionantes obras de engenharia do mundo, ligando os oceanos Atlântico e Pacífico.</p>
+                    <h2 class="text-[50px] md:text-[100px] m-0">Chichén Itzá</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Chichén Itzá é uma das mais importantes cidades maias, famosa pela pirâmide de Kukulkán e declarada Patrimônio da Humanidade pela UNESCO.</p>
                 </div>
             </div>
             <div class="absolute inset-0 opacity-0 transition-opacity duration-500 item">
                 <!-- Camada de gradiente -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                <img src="assets/img/panama/panama_cidade.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <img src="assets/img/mexico/teotichuacan.jpg" class="object-cover w-full h-full min-h-[100vh]">
                 <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
-                    <h2 class="text-[50px] md:text-[100px] m-0">Cidade do Panamá</h2>
-                    <p class="text-[14px] md:text-[16px] font-bold">A Cidade do Panamá é um centro cultural vibrante, conhecido por sua arquitetura moderna e rica história colonial.</p>
+                    <h2 class="text-[50px] md:text-[100px] m-0">Teotihuacán</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Teotihuacán é uma antiga cidade mesoamericana famosa por suas pirâmides e avenidas, sendo um dos destinos turísticos mais populares do México.</p>
                 </div>
             </div>
             <div class="absolute inset-0 opacity-0 transition-opacity duration-500 item">
                 <!-- Camada de gradiente -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                <img src="assets/img/panama/bocas-del-toro.jpg" class="object-cover w-full h-full min-h-[100vh]">
+                <img src="assets/img/mexico/cancun.jpg" class="object-cover w-full h-full min-h-[100vh]">
                 <div class="absolute left-5 md:left-20 top-[20%] w-[90%] max-w-[500px] z-10">
-                    <h2 class="text-[50px] md:text-[100px] m-0">Bocas del Toro</h2>
-                    <p class="text-[14px] md:text-[16px] font-bold">Bocas del Toro é um arquipélago famoso por suas praias de areia branca e vida marinha diversificada.</p>
+                    <h2 class="text-[50px] md:text-[100px] m-0">Cancún</h2>
+                    <p class="text-[14px] md:text-[16px] font-bold">Cancún é um dos principais destinos turísticos do México, conhecido por suas praias de areia branca e águas turquesas, além de vida noturna vibrante.</p>
                 </div>
             </div>
         </div>
 
         <!-- Botões de navegação -->
         <div class="absolute top-[30%] right-5 md:right-10 z-20 flex flex-col gap-2">
-            <button id="prev" class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">←</button>
-            <button id="next" class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">→</button>
+            <button id="prev"
+                class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">←</button>
+            <button id="next"
+                class="bg-gray-500 bg-opacity-30 text-gray-300 w-10 h-10 rounded-full hover:bg-gray-300 hover:text-black transition">→</button>
         </div>
 
         <!-- Miniaturas -->
         <div class="absolute bottom-[50px] w-full px-4 md:px-10 flex gap-4 overflow-auto justify-end">
             <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail active" data-index="0">
-                <img src="assets/img/panama/canal.jpg" class="w-full h-full object-cover rounded-md">
+                <img src="assets/img/mexico/chichen_itza.jpg" class="w-full h-full object-cover rounded-md">
                 <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
-                    Canal do Panamá
+                    Chichén Itzá
                 </div>
             </div>
             <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail" data-index="1">
-                <img src="assets/img/panama/panama_cidade.jpg" class="w-full h-full object-cover rounded-md">
+                <img src="assets/img/mexico/teotichuacan.jpg" class="w-full h-full object-cover rounded-md">
                 <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
-                    Cidade do Panamá
+                    Teotihuacán
                 </div>
             </div>
             <div class="w-[100px] md:w-[150px] h-[150px] md:h-[220px] flex-shrink-0 relative rounded-md thumbnail" data-index="2">
-                <img src="assets/img/panama/bocas-del-toro.jpg" class="w-full h-full object-cover rounded-md">
+                <img src="assets/img/mexico/cancun.jpg" class="w-full h-full object-cover rounded-md">
                 <div class="absolute inset-x-0 bottom-0 p-2 text-white bg-gradient-to-t from-black via-transparent to-transparent rounded-md">
-                    Bocas del Toro
+                    Cancún
                 </div>
             </div>
-        </div>
+        </div>    
     </div>
 
     <script src="js/home.js"></script>

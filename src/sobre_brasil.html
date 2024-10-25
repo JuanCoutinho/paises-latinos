@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil - Sobre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-gray-100 text-gray-800">
+
+    <nav class="bg-gray-900 border-gray-700">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="sobre.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="assets/img/brasil/bandeira.png" class="h-8" alt="Brasil Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Brasil</span>
+          </a>
+          <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Abrir menu principal</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900">
+              <li>
+                <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Início</a>
+              </li>
+              <li>
+                <a href="pontos_turisticos_brasil.html" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Pontos Turísticos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<section class="relative w-full h-screen hero-bg bg-cover bg-center flex flex-col justify-center items-center" style="background-image: url('assets/img/brasil/chichen_itza.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative text-center z-10 p-4">
+        <h1 class="text-white text-4xl md:text-6xl font-bold mb-4">Brasil</h1>
+        <p class="text-white text-lg md:text-xl mb-6">Descubra as maravilhas deste país cheio de cultura e história.</p>
+        <a href="#about" class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition">Explorar</a>
+    </div>
+    <div class="relative z-10 mt-6 flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 p-4">
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
+            <h3 class="text-xl md:text-2xl font-bold">Cultura</h3>
+            <p class="text-gray-600 mt-2">Explore a vibrante cultura brasileira.</p>
+        </div>
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
+            <h3 class="text-xl md:text-2xl font-bold">História</h3>
+            <p class="text-gray-600 mt-2">Conheça a fascinante história do Brasil.</p>
+        </div>
+        <div class="bg-white p-6 shadow-lg hover:shadow-xl transition text-center">
+            <h3 class="text-xl md:text-2xl font-bold">Geografia</h3>
+            <p class="text-gray-600 mt-2">Descubra as belezas naturais do Brasil.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Seções Sobre -->
+<div class="max-w-[80%] mx-auto py-10 space-y-16">
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in" id="about">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">História</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          O Brasil é um país rico em história, com uma herança que inclui culturas indígenas e influências coloniais portuguesas. O Brasil conquistou sua independência em 1822.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">Cultura</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          A cultura brasileira é uma mistura vibrante de influências indígenas, africanas e europeias. O Brasil é famoso por sua música, como samba e bossa nova, além de sua culinária diversificada.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">Geografia</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          O Brasil possui uma geografia diversa, incluindo florestas tropicais na Amazônia, montanhas, praias e vastos campos. O Rio de Janeiro e a Amazônia são destinos turísticos icônicos.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">Economia</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          A economia brasileira é uma das maiores da América Latina, destacando-se pela agricultura, indústria e serviços. O Brasil é um dos principais exportadores de café do mundo.
+      </p>
+  </section>
+
+  <section class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition fade-in">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">População</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+          O Brasil tem uma população de aproximadamente 213 milhões de pessoas, sendo um dos países mais populosos do mundo. Brasília é a capital do Brasil e um importante centro político.
+      </p>
+  </section>
+</div>
+
+<!-- Seção Carrousel -->
+<section class="max-w-[80%] mx-auto py-10">
+  <h2 class="text-4xl font-semibold text-gray-800 mb-4">Galeria</h2>
+  <div class="relative">
+      <div id="carousel" class="overflow-hidden">
+          <div class="flex transition-transform duration-500" id="slides">
+              <div class="min-w-full">
+                  <img src="assets/img/brasil/chichen_itza.jpg" alt="Chichén Itzá" class="w-full h-64 object-cover rounded-lg shadow-md">
+              </div>
+              <div class="min-w-full">
+                  <img src="assets/img/brasil/cdmx.jpg" alt="Cidade de México" class="w-full h-64 object-cover rounded-lg shadow-md">
+              </div>
+              <div class="min-w-full">
+                  <img src="assets/img/brasil/cancun.jpg" alt="Cancún" class="w-full h-64 object-cover rounded-lg shadow-md">
+              </div>
+          </div>
+      </div>
+      <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full">❮</button>
+      <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full">❯</button>
+  </div>
+</section>
+
+<!-- Seção Acordeão -->
+<section class="max-w-[80%] mx-auto py-10">
+  <h2 class="text-4xl font-semibold text-gray-800 mb-4">Perguntas Frequentes</h2>
+  <div class="space-y-4">
+      <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer">
+          <h3 class="text-lg font-semibold text-gray-800">Qual é a capital do Brasil?</h3>
+          <p class="mt-2 text-gray-600 hidden">A capital do Brasil é Brasília, uma cidade planejada e inaugurada em 1960.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer">
+          <h3 class="text-lg font-semibold text-gray-800">Quais idiomas são falados no Brasil?</h3>
+          <p class="mt-2 text-gray-600 hidden">O idioma oficial do Brasil é o português, mas há várias línguas indígenas faladas em diferentes regiões.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition cursor-pointer">
+          <h3 class="text-lg font-semibold text-gray-800">Qual é o clima do Brasil?</h3>
+          <p class="mt-2 text-gray-600 hidden">O Brasil possui um clima bastante diverso, variando entre tropical, equatorial e semiárido.</p>
+      </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="footer py-10">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Brasil. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarDefault = document.getElementById("navbar-default");
+
+    menuToggle.addEventListener("click", () => {
+        navbarDefault.classList.toggle("hidden");
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".fade-in");
+        const options = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+    const slides = document.getElementById("slides");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let currentIndex = 0;
+
+    prev.addEventListener("click", () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2;
+        updateSlidePosition();
+    });
+
+    next.addEventListener("click", () => {
+        currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0;
+        updateSlidePosition();
+    });
+
+    function updateSlidePosition() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    const accordions = document.querySelectorAll(".cursor-pointer");
+    accordions.forEach((accordion) => {
+        accordion.addEventListener("click", () => {
+            const p = accordion.querySelector("p");
+            p.classList.toggle("hidden");
+        });
+    });
+</script>
+</body>
+
+</html>
